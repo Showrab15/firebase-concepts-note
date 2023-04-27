@@ -1,0 +1,27 @@
+AUTHENTICATION VS AUTHORIZATION 
+
+***AUTHENTICATION***
+
+determines  whether  users are who the claim to be
+
+challenges the user to validate credentials (for example through  passwords , answer to security question , to facial recognition)
+
+usually done before AUTHORIZATION
+
+it usually needs the users login details
+
+
+generally , transmits info through an ID Token
+
+
+***AUTHORIZATION***
+
+determines what users can and cannot access
+
+verifies whether access is allowed through policies and rules
+
+usually done after successfull authentication
+
+while it needs user's privilege or security levels
+
+generally transmits info through an access token

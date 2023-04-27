@@ -1,0 +1,43 @@
+ 1. what is firebase?
+ A product of google. Helps developers to build apps faster and securely . No programming is required on the firebase side which makes it  easy to use its features more efficiently . Provides services to android , ios, web and unity . It provides cloud storage . Uses NoSQL for the database for the storage data .
+
+ 2. What is firebase SDK
+ The Firebase Admin SDKs bundle the Google Cloud client libraries for Firebase alongside client libraries and SDKs for several other Firebase features. The SDKs provides by firebase. Directly interact with backend service .There is no need to establish any connection between the app and the services. If you're using on of the firebase database options, you typically write code to query the database in your client app . the traditional  app development process requires writing both fronted and backend software . The fronted code just implements the API endpoints exposed by the backend and the backend code actually does the work . With Firebase Products , the traditional backend is bypassed , putting the work into the client . Full meaning of Firebase SDk is Software Development Kit
+
+ 3. Firebase Authentication ?
+ Firebase Authentication provides backend services , easy-to-use SDKs , and ready-made Ui libraries to authenticate users to your app . It supports authentication using passwords , phone numbers popular federated identity providers like google, facebook and tweeter and more.... . Firebase Authentication Authentication integrates tightly with other firebase services and it leverages industry standards like OAuth 2.OAuth
+
+ 4. OAuth 2.0 is?
+ OAuth 2.O which stands for "o[pen Authorization] is a standard designed to allow a website  or application to access resources  hosted by the others web apps on behalf of a user. OAuth 2.O provides consented access and restricts actions of what the client app can perform on resources on behalf of the user , without ever sharing the user's credentials. . Since Firebase Authentication follows industry standards like OAuth 2.O , lets's discuss more about OAuth 2.O to know how firebase authentication works behind the scene..........
+
+ 5. Principles of OAuth 2.O ?
+ OAuth 2.O is an authorization protocol and Not an authentication protocol. Authentication verifies the identity of a user or service , and authorization determines their access  rights.  OAuth 2.O is designed primarily as means of granting access to a set of resources , for example remote APIs or user's data. OAuth 2.O uses Access tokens . An Access Token is a piece of data that represents  the authorization to access resources on behalf to the end-user .
+
+ 6. How OAuth 2.O works ?
+ i. The client requests authorization (authorization request)  from the authorization server , supplying the client id and secret to as identification ; It also provides the scopes and an endpoint URI (redirect URi) to send the access token or the Authorization code to.
+
+ ii. The Authorization server authentication sever authenticates the client and verifies that the requested scopes are permitted .
+
+ iii. The resources owner interacts with the Authorization sever to grant access
+
+ iv. the Authorization server redirects back to the client with either an Authorization Code or Access token depending on the grant type
+
+v. With the access token the client requests access to the resources from the resources services
+
+7. Firebase Authentication ?
+Once a user authenticates , 3 things will happen
+i Information about the user is returned to the application via callbacks to allow us to personalize our apps;'s user experience for the specific user.
+
+ii. The User information contains a unique ID which is guaranteed  to be unique distinct across all providers . 
+
+iii. This unique Id is used to identify the user and what parts pf the backend system they are authorized access
+
+8. WHy use an Oauth provider ?
+A you make an app that accesses a solid web based back-end its's important to consider the following aspects of security.
+requiring strong passwords 
+the use of strong  encryption ensuring secure 
+ensuring secure communication (between client and server) 
+securing password storage within an encrypted database .
+Implementing password recovery . (which also has to be secure)
+adding 2 factor authentication (highly recommended extra layer of security)
+Including protection against man in the middle attacks

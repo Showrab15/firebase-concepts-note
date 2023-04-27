@@ -1,0 +1,56 @@
+1. What is onAuthStateChanged?
+
+onAuthStateChanged allows us to subscribe to the users current authentication state, and receive an event whatever that state changes...
+
+ On AuthStateChanged adds an observer for changes to the user's sign-in state . The observer triggers when it sign in and sign  out..
+
+ The onAuthStateChanged method also  returns  an unsubscriber function which allows us to stop listening for events whatever the hook is no longer use...
+
+ Calling onAuthStateChanged( )  adds an observer/listener for changes to the user's sign in state and return an unsubscribe function that can be called to cancel the listener....
+
+
+2. How to use onAuthSTateChanged ?
+
+There are two ways for call Interaction :
+1. Triggering an event by clicking a button etc........
+2. useEffect
+
+Since onAuthStateChanged is a side-effect and this function needs to be called without triggering any event , it needs to be incorporated inside the useEffect hook....
+
+
+The  onAuthStateChanged  takes two parameters 
+i. auth  - provides an Auth instance
+ii. observer - its a callback function . I gets invoked immediately after registering the onAuthStateChanged observer with the current authentication state and whenever the authentication state changes
+
+
+
+
+
+########################################### EXAMPLE WITH VIDEO ON MODUEL 61-2#################################
+
+
+3.  Why need to unsubscribe to onAuthStateChanged in firebase ?
+You unsubscribe to avoid memory leaks.
+When you initialise  onAuthStateChanged you create a listener . If you dint unsubscribe then this listener will continue to listen even after you stop using it . This will waste memory.
+
+In order to unsubscribe you need something to unsubscribe from.. This is why you assign the listener to a variable. This allows you too refer to the variable when you want to unsubscribe
+
+
+
+
+
+4. What is private Route /
+
+The private route component is used to protect selected pages in react app from unauthenticated users . 
+
+The privateRoute component will simply check the current user state from the user , destructured from useContext hook.
+
+The private route component renders child components (children)  if the user is logged in . If not logged in the user is redirected to the login page with the return url passed in the navigate component 
+
+
+
+
+
+
+
+

@@ -1,0 +1,183 @@
+1. How to Set up a firebase project 
+
+-----------------------------the setup method of every firebase project has been described here -------------------------
+
+* 1. install initial things which you have to need this project
+
+ i . install react router dom for your project setup by these command
+
+npm create vite@latest name-of-your-project -- --template react
+
+npm install react-router-dom localforage match-sorter sort-by
+
+
+
+ii. set up react router dom in your project by go to main jsx
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: Your component (must be import),
+    errorElement: Your error component  (must be import),
+
+    children: [
+        {
+             path: "/",
+    element: Your component (must be import)
+        }
+    ]
+  },
+]);
+
+
+
+* set this inside the  <React.StrictMode>
+
+    <RouterProvider router={router} />
+
+
+*2 . install firebase in your project by this command:
+
+npm install firebase
+
+* 3. if you need bootstrap, tailwind , daisyUi, heroicons, fontawesome icon intsall these 
+
+
+ * 4. create firebase project in google.firebase.com
+ * 5. create web app
+ * 6. save firebase config and export default app
+ * 5. build  > authentication > get  started > enable sign in method which you want to implement
+ 
+
+
+
+
+2. If you need Context APi then follow these steps
+*  i. create a provider components in src folders
+*  ii. create a context provider
+*  iii. create a context and set provider
+*  iv. set the children props
+*  v.  set context value
+*  vi. set context provider
+*
+
+
+
+
+
+
+
+3. How to host your project in firebase  ?
+
+----------------------------------------everything described here-----------------------------------------------
+
+ 
+*this two command  put in your   prompt code  one time per pc 
+
+  i. npm install -g firebase-tools
+  ii. firebase login
+  
+
+* For each project one time you have to give this command 
+
+ firebase init
+
+* After giving this command you select this by using ( up and  down arrow  of keyboard)  and use space bar for select : 
+
+  firebase hosting (1st one of the hosting options)
+
+* after these , follow these steps :
+
+  i. existing project
+  ii. select the project carefully which you want to deploy
+
+* In the  questions of prompt code :
+
+  i. which project as public directory ? you will give :  dist
+  ii. single page application ? you will give : yes
+  iii. continiously deployment ? you will give  : no
+
+
+* for every time deploy you have to give these two command step bt step
+
+  i. npm run build
+  ii. firebase deploy
+
+
+4. Time format management in react 
+
+* i . install moment by this command
+
+  npm install moment
+
+* ii. Then import moment in your file 
+
+  import moment from 'moment';
+
+* iii. ste date format by moment js like this 
+
+   <p>{moment().format("dddd, MMMM D, YYYY")}</p>
+
+   ###in the above the format is like this :  sunday, april 21, 2023
+
+   ### MORE ABOUT  MOMENT JS: https://momentjs.com/docs/#/displaying/  
+
+
+
+
+5. Heading line coming through like a breaking news of tv...
+
+* i . install marquee by this command 
+
+  npm install react-fast-marquee --save
+
+* ii. import react marque in you file like this 
+
+  import Marquee from "react-fast-marquee";
+
+* iii. set marquee in your project like this: 
+  <Marquee>
+  I can be a React component, multiple React components, or just some text.
+  </Marquee>
+
+  ### MORE ABOUT REACT MARQUEE : https://www.react-fast-marquee.com/documentation
+
+
+
+6. Use react icons in your project 
+
+* i . install react icons by this command
+
+npm install react-icons --save
+
+* ii. import icons like this , in your file which you want to set 
+
+import { FaBeer } from 'react-icons/fa';
+
+* iii. set icons on your UI like this ;
+
+  <p> <FaFacebook /> </p>
+
+
+
+7.  How to install react rating 
+
+npm install --save react-rating
+
+set react rating in your project like this 
+
+ <Rating           
+readonly
+placeholderRating={rating-number}
+emptySymbol={<FaRegStar></FaRegStar>}
+placeholderSymbol={<FaStar></FaStar>}
+fullSymbol={<FaStar></FaStar>}>
+</Rating>
+
+###note: Rating must be imported and also icons
